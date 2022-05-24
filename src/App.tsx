@@ -1,15 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import DatePicker from './components/DatePicker';
+import { PDate } from './types';
 
 function App() {
+  const [start, setStart] = React.useState<PDate>(new Date());
+  const [end, setEnd] = React.useState<PDate>(new Date());
+
+  const handleTimeChange = React.useCallback((startDate: PDate, endDate: PDate) => {
+    setStart(startDate);
+    setEnd(endDate);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+    <div className="app">
+      <div className='app__container'>
+        <div className='app__result'>
+          <p>
+            {`Start date: ${start.toString()}`}
+          </p>
+          <p>
+            {`End date: ${end.toString()}`}
+          </p>
+        </div>
+        <div className="app__datepicker">
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,6 +33,8 @@ function App() {
           Learn React
         </a>
       </header>
+        </div>
+      </div>
     </div>
   );
 }
