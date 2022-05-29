@@ -1,0 +1,56 @@
+@use './vars.scss';
+
+.button {
+  font-size: 16px;
+  line-height: 20px;
+
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--gray {
+    background-color: vars.$color-ghost-white;
+  }
+
+  &--blue {
+    font-weight: bold;
+    color: vars.$color-slate-blue;
+
+    &:focus,
+    &:hover {
+     box-shadow: 0 1px 0 0 (vars.$color-default-black);
+    }
+  }
+
+  &--calendar-popup {
+    font-size: 14px;
+    border-radius: 3px;
+    &:focus,
+    &:hover {
+      background-color: vars.$color-ghost-white;
+    }
+  }
+
+  &--now {
+    padding: 10px 40px;
+    background-color: vars.$color-shamrock;
+    border-radius: 7px;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

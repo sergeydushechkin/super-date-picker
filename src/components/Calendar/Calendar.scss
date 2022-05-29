@@ -1,0 +1,74 @@
+@use "../../styles/vars.scss";
+
+.calendar {
+  position: relative;
+  padding: 5px;
+}
+
+.calendar__date {
+  width: 100%;
+}
+
+.calendar__grid {
+  width: 100%;
+}
+
+.calendar__cell {
+  text-align: center;
+}
+
+.calendar__cell-button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  color: vars.$color-default-black;
+  background-color: transparent;
+  border: none;
+  transition: color vars.$trans, background-color vars.$trans;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &--other-month {
+    color: vars.$color-silver;
+  }
+
+  &--today {
+    font-weight: bold;
+    color: vars.$color-slate-blue;
+  }
+
+  &--active {
+    font-weight: bold;
+    background-color: vars.$color-shamrock;
+    pointer-events: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.calendar__popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: vars.$color-default-white;
+  border-radius: 7px;
+
+  &--hide {
+    display: none;
+  }
+}

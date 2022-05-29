@@ -1,0 +1,45 @@
+.calendar-navigation {
+  position: relative;
+  display: flex;
+}
+
+.calendar-navigation__controls {
+  display: flex;
+  width: 100%;
+  padding: 20px 8px;
+}
+
+.calendar-navigation__button {
+  transform: rotate(-90deg);
+
+  &--next {
+    transform: rotate(90deg);
+  }
+}
+
+.calendar-navigation__group {
+  margin: 0 auto;
+}
+
+.calendar-navigation__month-button {
+  margin-right: 2px;
+}
+
+.calendar-navigation__year-button {
+  margin-right: 2px;
+}
+
+.calendar-navigation__time-button {
+}
+
+.calendar-navigation__popup {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+
+  width: 100px;
+  height: 500px;
+
+  background-color: red;
+  overflow: auto;
+}

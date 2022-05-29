@@ -24,15 +24,7 @@ function App() {
           </p>
         </div>
         <div className="app__datepicker">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <DatePicker start={start} end={end} onDateChange={handleTimeChange}/>
         </div>
       </div>
     </div>

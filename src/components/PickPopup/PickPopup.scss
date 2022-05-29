@@ -1,0 +1,23 @@
+@use "../../styles/vars.scss";
+
+.pick-popup__tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.pick-popup__button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+
+  &--active {
+    border-bottom: 2px solid vars.$color-slate-blue;
+  }
+}
